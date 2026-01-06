@@ -170,6 +170,9 @@ The dataset consists of **7 main tables** used to build the purchasing dashboard
 
 <img width="1777" height="1039" alt="image" src="https://github.com/user-attachments/assets/9bb1c6c9-1065-46ea-a0a0-8a939dd45cc6" />
 
+<details>
+<summary><strong>Relationships Summary</strong></summary>
+  
 | **From Table**                  | **To Table**                     | **Join Key**                | **Relationship Type**                                      |
 |--------------------------------|----------------------------------|-----------------------------|------------------------------------------------------------|
 | `Fact_Purchasing_OrderDetail`  | `Dim_Purchasing_OrderHeader`     | `PurchaseOrderID`           | Many-to-One (many order lines per order header)            |
@@ -180,6 +183,8 @@ The dataset consists of **7 main tables** used to build the purchasing dashboard
 | `Dim_Purchasing_ProductVendor` | `Dim_Product_Product`            | `ProductID`                 | Many-to-One (vendor offers multiple products)              |
 | `Dim_Product_Product`          | `Dim_Product_ProductTaxonomy`    | `ProductSubcategoryID`      | Many-to-One (each product belongs to one subcategory)      |
 | `Fact_Product_Inventory`       | `Dim_Product_Product`            | `ProductID`                 | Many-to-One (each inventory record linked to a product)    |
+
+</details>
 
 ## 🧠 Design Thinking Process
 
